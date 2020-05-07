@@ -13,7 +13,7 @@
                     <DataTemplate>
                         <Image Source="{Binding ImageSrc}" Aspect="Fill"/>
                     </DataTemplate>
-                </CarouselView.ItemTemplate>
+                </CarouselView.ItemTemplate> 
             </CarouselView>
 
             <Image Source="keisoft_textlogo.png" WidthRequest="100" HeightRequest="30" VerticalOptions="Start" HorizontalOptions="Start" Margin="10,0,0,0"/>
