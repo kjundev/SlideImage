@@ -17,6 +17,7 @@ namespace SlideImage
 
             List<dynamic> dynamics = new List<dynamic>();
             
+            // 원본이미지 경로
             // http://www.123mobilewallpapers.com/wp-content/uploads/2016/02/sweet_valentines_day_coffee_heart.jpg
             dynamics.Add(new { ImageSrc = "image1.jpg" });
 
@@ -28,7 +29,8 @@ namespace SlideImage
 
             this.mainView.ItemsSource = dynamics;
 
-            Device.StartTimer(TimeSpan.FromSeconds(7), (Func<bool>)(() =>
+            // 3초 간격으로 자동 스크롤이 되도록 합니다.
+            Device.StartTimer(TimeSpan.FromSeconds(3), (Func<bool>)(() =>
             {
                 this.mainView.Position = (this.mainView.Position + 1) % 3;
 
@@ -36,6 +38,7 @@ namespace SlideImage
             }));
         }
 
+        // 각 메뉴 클릭 이벤트입니다.
         private void StoreButton_Clicked(object sender, EventArgs e)
         {
         }
